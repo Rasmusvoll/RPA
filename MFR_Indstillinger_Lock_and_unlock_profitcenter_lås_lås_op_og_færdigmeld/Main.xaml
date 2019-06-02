@@ -1,0 +1,1437 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="834,19293" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="21">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="794,19213" sap2010:WorkflowViewState.IdRef="Sequence_16">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="CatchAll" sap:VirtualizedContainerService.HintSize="772,19089" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Lock and unlock profitcenter (Lås, lås op &amp; færdigmeld)" sap:VirtualizedContainerService.HintSize="750,18720" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence.Variables>
+          <Variable x:TypeArguments="x:String" Default="1000000005" Name="profitcenter" />
+          <Variable x:TypeArguments="x:Boolean" Name="textsexists" />
+          <Variable x:TypeArguments="x:String" Default="Direktionen" Name="profitcenterNavn" />
+          <Variable x:TypeArguments="x:String" Default="z813_adm1" Name="testbruger" />
+          <Variable x:TypeArguments="x:String" Name="attribute" />
+          <Variable x:TypeArguments="x:String" Name="tjektekst" />
+        </Sequence.Variables>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <Sequence DisplayName="Login Rollebaseret indgang " sap:VirtualizedContainerService.HintSize="728,801" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="414,677" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="http://dportal.kmd.dk">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,578" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="brugernavn" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="indsæt brugernavn" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[testbruger]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7fe520e937c995c460c63a7f168fe0a5" Selector="&lt;webctrl id='def' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Indsæt password" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="Kmd12345">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4d31cf221098310083291baf337f89b9" Selector="&lt;webctrl id='logonpassfield' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click login" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6f0dbfb2d4c40b6ddf023575544ffed6" Selector="&lt;webctrl id='button' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+          </ui:OpenBrowser>
+        </Sequence>
+        <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="728,5741" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="step1" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_73" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6cfc355d4ffa1db16e3f07bdbf0da01f" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='Forside - KMD Rollebaseret Indgang - Udvikling DP6. - Internet E*' /&gt;&lt;ctrl idx='1' name='Maximize' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="40" OffsetY="3" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="af6dd27740dc372f948a2968ada5d715" Selector="&lt;html htmlwindowname='*' title='Forside - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_6' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="45" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5cf2e43268046c9582e7532ccc84ba3d" Selector="&lt;html htmlwindowname='*' title='Oversigt - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='navNodeAnchor_2_5' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_1">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="7" OffsetY="8" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="647d94aae366a85c2540cf4371438766" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b99c942248a0d9c7013d0a9ae93d3e6d" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="34" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ded625bb69c8113a7f52481db2436858" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Administration' parentid='DetailedNavigationTree9navurl://37c6500a221130c3285ef4eda676e6c5*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step3" EmptyField="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[profitcenter]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b6b696366a5ca963c5776c5d0dc495d8" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='profit_ctr' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step3" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="20" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9283da64413326ab4691194391e87c9d" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='htmlb_button_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="39" OffsetY="4" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="804d8fd73b036344c275c8dda41925fa" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="3" OffsetY="10" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e93a597eec6d87e5e916c47776108490" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15e18d103157d779ff3f8a72b3b592c4" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Mit forventede regnskab (MFR)' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="93" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6c1a1572d8e3ba781769cd6dfbc38bf2" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://43f2cc4b9aebb28eaf23db268538b1a0*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="500" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="23c9d20ec58bbd3da51463c40ab257b7" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton03' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step4" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="16" OffsetY="5" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="557645a446f98ee3d0dba541c6100980" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl aaname='Vælg ' parentid='controllerTbl' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Sequence DisplayName="If_Icon_there_then_click" sap:VirtualizedContainerService.HintSize="706,1343" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:Int32" Name="counter" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="504,1219" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Variables>
+                <Variable x:TypeArguments="x:Int32" Name="Image_count" />
+                <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Images_found" />
+                <Variable x:TypeArguments="x:Boolean" Name="image_there" />
+                <Variable x:TypeArguments="ui:UiElement" Name="image_click" />
+              </TryCatch.Variables>
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="486,970" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:FindImageMatches DisplayName="Find Image Matches 'iexplore.exe Hierarkino...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="FindImageMatches_3" Matches="[Images_found]">
+                    <ui:FindImageMatches.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVDhP7ZPfS1NxGIcPVKPcVRbiD5rIoIs0jKC8iO1mF2IlaIINKiNiQumWyyO4ZkJzOsu048QCzcoaRkS2mQpFp53RL0QjiVEKY0EQhbuQZXoT8eQ5Ugxi9A/0wnPx/b6f5+p9X4GU6urqQhCEtKj91BJsNhu/KSkpIScnB6fTiSRJ+Hw+RFHU3uq/2k/NC3q9HpPJRGVlJVarFYfDgSzLxONxZmaijAbD3H/wFMuBKrbv2qth3Lkb3cZNCAaDgUAgwPz8PIlEQpNCoRDBYJCBwRBeX4i2jiB2zzVqL0gax5s72JyVjaDT6SgoKKCwsJDi4mKKioowGo0a+flGcvPWyMo1sDV3m8aW7DzWrd+A0NTUREZGBjv27MNUXv1P1JyaVz0hGo2SmZnJsbpGrtwZxT8ygavnLp3Dj2gduIfz8k2au0eodV/klEei/ES9lle9P7LX6yUWi/Hla5K+qxFevV8gIE/T3DNCT6/MoaqjHDktrsr29PLiYpKJyQhvPy4QDM/RN/CYsTGZhoaziJ5+as50ppeTySSKovDu0wLjSozrNxRtdC6Xi5ZLw5xs7P0vp8rflr7zcmqa2fhnJpUP3LqtMD4hc761gxbfEDV1benllR8/mUss8/rNLM/CEUJjYfr6FbqlJ7jcEmX7D6aXl5ZXmJqNEnn+goerFzU4pKwuSZhzbj/1dpHS0tK/5YqKCtrb2/H7/dreqndsqxU5bBWptjZisZRhNpu1A1qTo/wCEiStk8NYtsgAAAAASUVORK5CYII=" />
+                    </ui:FindImageMatches.Image>
+                    <ui:FindImageMatches.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:FindImageMatches.Target>
+                  </ui:FindImageMatches>
+                  <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:Int32">[Image_count]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:Int32">[Images_found.Count]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,600" sap2010:WorkflowViewState.IdRef="DoWhile_2">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <DoWhile.Condition>[counter &lt; Image_count]</DoWhile.Condition>
+                    <Sequence sap:VirtualizedContainerService.HintSize="336,438" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:WaitImageAppear DisplayName="Find Image 'iexplore.exe Hierarkino...'" FoundElement="[image_click]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                        <ui:WaitImageAppear.Image>
+                          <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAYAAADtNKTnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVDhP7ZRdSFNhGMcH1Si9ykL8oIkMukjDCMqLmDdeiJWgCTaojIgJ5Ucuj+DShHQ6y7TjxAaalTWMiGwzFYzWzugL0WjEKIWxIIjCXcgyvYn45XmFkmoMyu564Hdx3vf5/26e87waVqH+jaS9vR2NRhMV9f7n0iiKgslk+k52djbJycmYzWZkWcZmsyFJkvhWz9X7lf1qXuNwOIiPj8dgMFBUVITRaKSqqgqPx0MoFGJqKsCQy8uduw/J3VfM1h27BfrtO9Gu34CaFxKdTofT6WRmZoZwOCzCbrcbl8tFb58bq81Nc6uLyiYHZedkwdG6VjYmJv2QaLVa0tPTycjIICsri8zMTPR6vSAtTU9K6jKJKTo2p2wRbEpKZc3adcsSv99PbW0tcXFxbNu1B0NBSUzUPrVfzal5MZ1AIEBCQgJHymu4dHMI++Aols5btA3cp7H3NuaL16jrGKSs/jwnmmQKjlWIfjUnprNSYrVaCQaDfPgYofuyj2evZ3F6JqnrHKSzy8OB4sMcOiktSSpjS+bmIoyO+Xj5dhaXd5ru3nGGhz1UV59Gauqh9FRbbEkkEhHzf/VulhElyJWrihi5xWKh4cIAx2u6/kv+RPJp/jNPJybxh94zprzh+g2FkVEPZxtbabD1U1reHFuy+OUr0+EFnr/w88jrwz3spbtHoUN+gKVeJn/v/tiS+YVFJvwBfI+fcG9pg/v6laWfzcuZejsVlRJ5eXnRJYWFhbS0tGC328VeqO+IqUzioFGixFhDbm4+OTk5YlGjSn73kkXjF8nf1ipI4BvhB156O5GZ6QAAAABJRU5ErkJggg==" />
+                        </ui:WaitImageAppear.Image>
+                        <ui:WaitImageAppear.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+                        </ui:WaitImageAppear.Target>
+                      </ui:WaitImageAppear>
+                      <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition Position="Center">
+                            <ui:CursorPosition.OffsetX>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetX>
+                            <ui:CursorPosition.OffsetY>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:CursorPosition.OffsetY>
+                          </ui:CursorPosition>
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[image_click]" WaitForReady="INTERACTIVE" />
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </DoWhile>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="490,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:TimeoutException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+                <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="490,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="ui:ActivityTimeoutException">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="ui:ActivityTimeoutException" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+          </Sequence>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step5" EmptyField="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="True" Text="[profitcenter]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8439c4d795fa1cba8e1f57be6e249573" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='single_select' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="8" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6313dc37d9c35e683b383c4f1e87aca6" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='add_single_img' tag='IMG' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="16" OffsetY="5" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="73d8bace7583c9d66ad6b40043fc1339" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='saveBut' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="500" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="1000000005 Direktionen">
+            <ui:SelectItem.Items>
+              <scg:List x:TypeArguments="x:String" Capacity="4">
+                <x:String>Vælg ...</x:String>
+                <x:String>1000000005 Direktionen</x:String>
+              </scg:List>
+            </ui:SelectItem.Items>
+            <ui:SelectItem.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9d991489332d7b81a38543ba48cd445e" Selector="&lt;html omit:htmlwindowname='WIDx1558610296788' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='profit_ctr_dd' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:SelectItem.Target>
+          </ui:SelectItem>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="36" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ccd7ca30583d44ff468ab2915785067c" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton01' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3" WaitActive="False" WaitVisible="False">
+            <ui:WaitUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="01c1d26ed016f90dd31795dcd9bc8cc4" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='__MESSAGES_LIST_ITEM_AcMess_BI_MB_0-txt' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:WaitUiElementAppear.Target>
+          </ui:WaitUiElementAppear>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step5" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="9" OffsetY="4" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0a196fffc19386a4b81ef1695b5deaac" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;wnd cls='WorkerW' title='Navigation Bar' /&gt;&lt;wnd cls='DirectUIHWND' /&gt;&lt;ctrl name='Tab Row' role='page tab list' /&gt;&lt;ctrl name='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' role='page tab' /&gt;&lt;ctrl name='Close Tab (Ctrl+W)' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="706,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <TextExpression.Namespaces>
+              <sco:Collection x:TypeArguments="x:String">
+                <x:String>System.Activities</x:String>
+                <x:String>System.Activities.Statements</x:String>
+                <x:String>System.Activities.Expressions</x:String>
+                <x:String>System.Activities.Validation</x:String>
+                <x:String>System.Activities.XamlIntegration</x:String>
+                <x:String>Microsoft.VisualBasic.Activities</x:String>
+                <x:String>System</x:String>
+                <x:String>System.Collections.Generic</x:String>
+                <x:String>System.Data</x:String>
+                <x:String>System.Diagnostics</x:String>
+                <x:String>System.IO</x:String>
+                <x:String>System.Linq</x:String>
+                <x:String>System.Management.Automation</x:String>
+                <x:String>System.Net.Mail</x:String>
+                <x:String>System.Xml</x:String>
+                <x:String>System.Xml.Linq</x:String>
+                <x:String>UiPath.Library</x:String>
+                <x:String>System.Windows.Markup</x:String>
+              </sco:Collection>
+            </TextExpression.Namespaces>
+            <TextExpression.References>
+              <sco:Collection x:TypeArguments="AssemblyReference">
+                <AssemblyReference>System.Activities</AssemblyReference>
+                <AssemblyReference>mscorlib</AssemblyReference>
+                <AssemblyReference>System.Data</AssemblyReference>
+                <AssemblyReference>System</AssemblyReference>
+                <AssemblyReference>System.Core</AssemblyReference>
+                <AssemblyReference>System.Management.Automation</AssemblyReference>
+                <AssemblyReference>System.Xml</AssemblyReference>
+                <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                <AssemblyReference>UiPath.Library</AssemblyReference>
+                <AssemblyReference>PresentationFramework</AssemblyReference>
+                <AssemblyReference>WindowsBase</AssemblyReference>
+                <AssemblyReference>PresentationCore</AssemblyReference>
+                <AssemblyReference>System.Xaml</AssemblyReference>
+              </sco:Collection>
+            </TextExpression.References>
+            <sap2010:WorkflowViewState.ViewStateManager>
+              <sap2010:ViewStateManager>
+                <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+              </sap2010:ViewStateManager>
+            </sap2010:WorkflowViewState.ViewStateManager>
+          </Delay>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="13" OffsetY="7" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="294cd3e6a631838be18a22113d7e7f12" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_6' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="32" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5cf2e43268046c9582e7532ccc84ba3d" Selector="&lt;html htmlwindowname='*' title='Oversigt - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='navNodeAnchor_2_5' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_3">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="4" OffsetY="9" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="647d94aae366a85c2540cf4371438766" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b99c942248a0d9c7013d0a9ae93d3e6d" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="35" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ded625bb69c8113a7f52481db2436858" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Administration' parentid='DetailedNavigationTree9navurl://37c6500a221130c3285ef4eda676e6c5*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step6" EmptyField="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TypeInto_6" SendWindowMessages="False" SimulateType="True" Text="[profitcenter]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b6b696366a5ca963c5776c5d0dc495d8" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='profit_ctr' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step6" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="29" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2295cbdbf7d4f1cee4cf9199e70e7f78" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TextExists DisplayName="Step6" FormattedText="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TextExists_1" Occurrence="1" Text="[profitcenterNavn]">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="75c978e85090693da699cdb1a31baffc" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl isleaf='1' parentid='htmlb_form_1' tableCol='8' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:TextExists.Target>
+          </ui:TextExists>
+        </Sequence>
+        <Sequence DisplayName="Step7" sap:VirtualizedContainerService.HintSize="728,760" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step7" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="18" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="804d8fd73b036344c275c8dda41925fa" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_4">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step7" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="8" OffsetY="9" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e93a597eec6d87e5e916c47776108490" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step7" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fb9487ec1e520c132015002ddfcdfa09" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Mit forventede regnskab (MFR)' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="step7" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="62" OffsetY="11" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fce2d20afee10d914aae98c8ce776765" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://43f2cc4b9aebb28eaf23db268538b1a0*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="step7" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="43" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="23c9d20ec58bbd3da51463c40ab257b7" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton03' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+        <Sequence DisplayName="Step8" sap:VirtualizedContainerService.HintSize="728,1264" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayMS="{x:Null}" ClickType="CLICK_DOUBLE" DelayBefore="500" DisplayName="Step8" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_29" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="37" OffsetY="11" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6d278c70e152a50369db0dedfdf1345c" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl aaname='Vælg ' parentid='main' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step8" EmptyField="True" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SendWindowMessages="False" SimulateType="True" Text="Central bemærkning">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="01fa35f65ad76dab059a598b820dbce2" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='zkmdvfib_bemrk' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step8" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_30" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="8" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="adb3bb1c65ab7034b33d9041a85f7085" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='profit_group__profit_one-img' tag='IMG' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="4000" DisplayName="Step8" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="36" OffsetY="5" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="62c0539dad4d0db866a9d5d0459628cc" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step 8" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_13" WaitActive="False" WaitVisible="False">
+            <ui:WaitUiElementAppear.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c55ab606ce7a3ca7a3b903588356d8b6" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl tag='B' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:WaitUiElementAppear.Target>
+          </ui:WaitUiElementAppear>
+          <ui:TextExists DisplayName="Step8" FormattedText="False" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TextExists_2" Occurrence="1" Result="[textsexists]" Text="Direktionen">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bbf7695d4f7780cf80612337de138dd4" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl idx='3' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:TextExists.Target>
+          </ui:TextExists>
+          <If Condition="[textsexists=true]" sap:VirtualizedContainerService.HintSize="464,208" sap2010:WorkflowViewState.IdRef="If_5">
+            <If.Else>
+              <Throw Exception="[new Exception(&quot;FEJL&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_5" />
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="Step9" sap:VirtualizedContainerService.HintSize="728,1114" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="19" OffsetY="11" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4c2f2e2f2cd17cac1216459055fac1ba" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='http://portal-k2-nc-46.kmd.dk/sap(bD1kYSZjPTAwMw==)/bc/bsp/sap/z*' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="8" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f9ece385a698679933ff17e6679bee16" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;wnd cls='WorkerW' title='Navigation Bar' /&gt;&lt;wnd cls='DirectUIHWND' /&gt;&lt;ctrl name='Tab Row' role='page tab list' /&gt;&lt;ctrl name='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' role='page tab' /&gt;&lt;ctrl name='Close Tab (Ctrl+W)' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="706,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <TextExpression.Namespaces>
+              <sco:Collection x:TypeArguments="x:String">
+                <x:String>System.Activities</x:String>
+                <x:String>System.Activities.Statements</x:String>
+                <x:String>System.Activities.Expressions</x:String>
+                <x:String>System.Activities.Validation</x:String>
+                <x:String>System.Activities.XamlIntegration</x:String>
+                <x:String>Microsoft.VisualBasic.Activities</x:String>
+                <x:String>System</x:String>
+                <x:String>System.Collections.Generic</x:String>
+                <x:String>System.Data</x:String>
+                <x:String>System.Diagnostics</x:String>
+                <x:String>System.IO</x:String>
+                <x:String>System.Linq</x:String>
+                <x:String>System.Management.Automation</x:String>
+                <x:String>System.Net.Mail</x:String>
+                <x:String>System.Xml</x:String>
+                <x:String>System.Xml.Linq</x:String>
+                <x:String>UiPath.Library</x:String>
+                <x:String>System.Windows.Markup</x:String>
+              </sco:Collection>
+            </TextExpression.Namespaces>
+            <TextExpression.References>
+              <sco:Collection x:TypeArguments="AssemblyReference">
+                <AssemblyReference>System.Activities</AssemblyReference>
+                <AssemblyReference>mscorlib</AssemblyReference>
+                <AssemblyReference>System.Data</AssemblyReference>
+                <AssemblyReference>System</AssemblyReference>
+                <AssemblyReference>System.Core</AssemblyReference>
+                <AssemblyReference>System.Management.Automation</AssemblyReference>
+                <AssemblyReference>System.Xml</AssemblyReference>
+                <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                <AssemblyReference>UiPath.Library</AssemblyReference>
+                <AssemblyReference>PresentationFramework</AssemblyReference>
+                <AssemblyReference>WindowsBase</AssemblyReference>
+                <AssemblyReference>PresentationCore</AssemblyReference>
+                <AssemblyReference>System.Xaml</AssemblyReference>
+              </sco:Collection>
+            </TextExpression.References>
+            <sap2010:WorkflowViewState.ViewStateManager>
+              <sap2010:ViewStateManager>
+                <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+              </sap2010:ViewStateManager>
+            </sap2010:WorkflowViewState.ViewStateManager>
+          </Delay>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="48" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7d7262f7e6ef3168afeaddb4d8c4320a" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_6' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_35" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="11" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5cf2e43268046c9582e7532ccc84ba3d" Selector="&lt;html htmlwindowname='*' title='Oversigt - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='navNodeAnchor_2_5' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_5">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="10" OffsetY="7" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="647d94aae366a85c2540cf4371438766" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b99c942248a0d9c7013d0a9ae93d3e6d" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step9" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="46" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7c89d07f2c4b36d5d23e773cb47352aa" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Administration' parentid='DetailedNavigationTree9navurl://37c6500a221130c3285ef4eda676e6c5*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+        </Sequence>
+        <Sequence DisplayName="Step10" sap:VirtualizedContainerService.HintSize="728,826" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step10" EmptyField="True" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="TypeInto_8" SendWindowMessages="False" SimulateType="True" Text="[profitcenter]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="24ecb760e3ae9488eddd310d601df393" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='profit_ctr' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step10" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="28" OffsetY="2" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2295cbdbf7d4f1cee4cf9199e70e7f78" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="aaname" DisplayName="Step10" sap:VirtualizedContainerService.HintSize="464,134" sap2010:WorkflowViewState.IdRef="GetAttribute_4">
+            <ui:GetAttribute.Result>
+              <OutArgument x:TypeArguments="x:String">[tjektekst]</OutArgument>
+            </ui:GetAttribute.Result>
+            <ui:GetAttribute.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1e6ea63ac2301f02ed15c4fb564f0d5e" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Direktionen er nu låst op.' parentid='htmlb_form_1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetAttribute.Target>
+          </ui:GetAttribute>
+          <If Condition="[tjektekst.Contains(profitcenterNavn)=True]" sap:VirtualizedContainerService.HintSize="464,208" sap2010:WorkflowViewState.IdRef="If_1">
+            <If.Else>
+              <Throw Exception="[new Exception(&quot;Fejl&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="728,1226" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step11" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="34" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="804d8fd73b036344c275c8dda41925fa" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_6">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step11" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="4" OffsetY="10" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e93a597eec6d87e5e916c47776108490" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step11" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_7" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fb9487ec1e520c132015002ddfcdfa09" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Mit forventede regnskab (MFR)' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step11" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="56" OffsetY="4" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fce2d20afee10d914aae98c8ce776765" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://43f2cc4b9aebb28eaf23db268538b1a0*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step11" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="87" OffsetY="12" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f5164e01e0e6c593ec265f1a5220473f" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton04' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step12" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="7" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="29284877ea472b987530e0a7b79975c8" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='profit_group__profit_all-img' tag='IMG' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step12" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="19" OffsetY="5" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="cb0a36642334baed4b1ad0d23fa1a4a8" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TextExists DisplayName="Step12" FormattedText="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TextExists_4" Occurrence="1" Text="alle Profitcentre">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="27f18b88f0d4639c956e035309078b97" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl idx='3' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:TextExists.Target>
+          </ui:TextExists>
+        </Sequence>
+        <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="728,2030" sap2010:WorkflowViewState.IdRef="Sequence_13">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="disabled" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="disabled" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+            <ui:GetAttribute.Result>
+              <OutArgument x:TypeArguments="x:String">[disabled]</OutArgument>
+            </ui:GetAttribute.Result>
+            <ui:GetAttribute.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="32be83a2cb473d5c740d20f4870f8c6f" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='profit_ctr_dd' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetAttribute.Target>
+          </ui:GetAttribute>
+          <If Condition="[disabled &lt;&gt; &quot;1&quot;]" sap:VirtualizedContainerService.HintSize="706,208" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Throw Exception="[new Exception(&quot;Fejl&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+            </If.Then>
+          </If>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="30" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5723e3ed970721560b7ae091c7671b67" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='http://portal-k2-nc-46.kmd.dk/sap(bD1kYSZjPTAwMyZwPTMzMTAzJnY9Ny*' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="6" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9b42fde1f82aab0244decc3555524324" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;wnd cls='WorkerW' title='Navigation Bar' /&gt;&lt;wnd cls='DirectUIHWND' /&gt;&lt;ctrl name='Tab Row' role='page tab list' /&gt;&lt;ctrl name='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' role='page tab' /&gt;&lt;ctrl name='Close Tab (Ctrl+W)' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="17" OffsetY="14" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7d7262f7e6ef3168afeaddb4d8c4320a" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_6' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="706,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <TextExpression.Namespaces>
+              <sco:Collection x:TypeArguments="x:String">
+                <x:String>System.Activities</x:String>
+                <x:String>System.Activities.Statements</x:String>
+                <x:String>System.Activities.Expressions</x:String>
+                <x:String>System.Activities.Validation</x:String>
+                <x:String>System.Activities.XamlIntegration</x:String>
+                <x:String>Microsoft.VisualBasic.Activities</x:String>
+                <x:String>System</x:String>
+                <x:String>System.Collections.Generic</x:String>
+                <x:String>System.Data</x:String>
+                <x:String>System.Diagnostics</x:String>
+                <x:String>System.IO</x:String>
+                <x:String>System.Linq</x:String>
+                <x:String>System.Management.Automation</x:String>
+                <x:String>System.Net.Mail</x:String>
+                <x:String>System.Xml</x:String>
+                <x:String>System.Xml.Linq</x:String>
+                <x:String>UiPath.Library</x:String>
+                <x:String>System.Windows.Markup</x:String>
+              </sco:Collection>
+            </TextExpression.Namespaces>
+            <TextExpression.References>
+              <sco:Collection x:TypeArguments="AssemblyReference">
+                <AssemblyReference>System.Activities</AssemblyReference>
+                <AssemblyReference>mscorlib</AssemblyReference>
+                <AssemblyReference>System.Data</AssemblyReference>
+                <AssemblyReference>System</AssemblyReference>
+                <AssemblyReference>System.Core</AssemblyReference>
+                <AssemblyReference>System.Management.Automation</AssemblyReference>
+                <AssemblyReference>System.Xml</AssemblyReference>
+                <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                <AssemblyReference>UiPath.Library</AssemblyReference>
+                <AssemblyReference>PresentationFramework</AssemblyReference>
+                <AssemblyReference>WindowsBase</AssemblyReference>
+                <AssemblyReference>PresentationCore</AssemblyReference>
+                <AssemblyReference>System.Xaml</AssemblyReference>
+              </sco:Collection>
+            </TextExpression.References>
+            <sap2010:WorkflowViewState.ViewStateManager>
+              <sap2010:ViewStateManager>
+                <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+              </sap2010:ViewStateManager>
+            </sap2010:WorkflowViewState.ViewStateManager>
+          </Delay>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_48" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="52" OffsetY="28" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="40655e9a68ca37dad878910016a1e5ce" Selector="&lt;html htmlwindowname='*' title='Oversigt - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='level2' tag='TABLE' /&gt;&lt;webctrl id='navNode_2_5' tag='TD' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_7">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_49" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="6" OffsetY="12" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="647d94aae366a85c2540cf4371438766" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_8" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b99c942248a0d9c7013d0a9ae93d3e6d" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step13" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="32" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7c89d07f2c4b36d5d23e773cb47352aa" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Administration' parentid='DetailedNavigationTree9navurl://37c6500a221130c3285ef4eda676e6c5*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step14" EmptyField="True" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="False" SimulateType="True" Text="[testbruger]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e96bfbef15d0bd56f6275ec811cb68a6" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='user_id' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step14" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_51" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="7" OffsetY="4" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="646e5e89995bf99ec019ed8109e2a63d" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='htmlb_button_3' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TextExists DisplayName="step14" FormattedText="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TextExists_5" Occurrence="1" Text="[testbruger+&quot; er nu låst op.&quot;]">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="a580eb5f44ac5feb1401eda514630ccf" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl isleaf='1' parentid='htmlb_form_1' tableCol='7' tableRow='2' tag='SPAN' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:TextExists.Target>
+          </ui:TextExists>
+        </Sequence>
+        <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="728,2088" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_52" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="15" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="804d8fd73b036344c275c8dda41925fa" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_8">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="6" OffsetY="7" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e93a597eec6d87e5e916c47776108490" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_9" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fb9487ec1e520c132015002ddfcdfa09" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Mit forventede regnskab (MFR)' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_54" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="44" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fce2d20afee10d914aae98c8ce776765" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://43f2cc4b9aebb28eaf23db268538b1a0*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_55" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="40" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3253441bd46b175e6b319a9adcc925e8" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton03' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step15" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_57" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="32" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6d278c70e152a50369db0dedfdf1345c" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl aaname='Vælg ' parentid='main' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step16" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_58" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="3" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d6aae648905d7bdaacf6775eecf89367" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='profit_group__profit_one-img' tag='IMG' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step16" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_59" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="27" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="62c0539dad4d0db866a9d5d0459628cc" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TextExists DisplayName="Step16" FormattedText="False" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TextExists_6" Occurrence="1" Text="[profitcenterNavn]">
+            <ui:TextExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="bbf7695d4f7780cf80612337de138dd4" Selector="&lt;html url='http://portal-k2-nc-46.kmd.dk/sap(*)/bc/bsp/sap/zfib0001_mfr/mfr_done.htm' /&gt;&lt;webctrl idx='3' tag='TABLE' /&gt;&lt;webctrl tag='TD' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+            </ui:TextExists.Target>
+          </ui:TextExists>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step16" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_60" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d24d3644dd3c5e30f3094daee638f4e8" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='http://portal-k2-nc-46.kmd.dk/sap(bD1kYSZjPTAwMw==)/bc/bsp/sap/z*' /&gt;&lt;ctrl idx='1' name='Close' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step16" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_61" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="82fa162fa0ebe46e6b87e67b3dccfd0e" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton01' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="tag" DisplayName="Step16" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="GetAttribute_2">
+            <ui:GetAttribute.Result>
+              <OutArgument x:TypeArguments="x:String">[attribute]</OutArgument>
+            </ui:GetAttribute.Result>
+            <ui:GetAttribute.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="396aaddbcfb15551c0742c065f3121c1" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl parentid='ANALYSIS_ITEM_2_ia_pt_a-content' tag='TABLE' /&gt;&lt;webctrl id='ANALYSIS_ITEM_2_ia_pt_cid7x3' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetAttribute.Target>
+          </ui:GetAttribute>
+          <If Condition="[attribute=&quot;TD&quot;]" sap:VirtualizedContainerService.HintSize="706,210" sap2010:WorkflowViewState.IdRef="If_3">
+            <If.Else>
+              <Throw Exception="[new Exception(&quot;FEJL&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+            </If.Else>
+          </If>
+        </Sequence>
+        <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="728,2386" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_62" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="7" OffsetY="8" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2280a1cd6b29acce8195b634fb7e2b9b" Selector="&lt;wnd app='iexplore.exe' cls='IEFrame' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;wnd cls='WorkerW' title='Navigation Bar' /&gt;&lt;wnd cls='DirectUIHWND' /&gt;&lt;ctrl name='Tab Row' role='page tab list' /&gt;&lt;ctrl name='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' role='page tab' /&gt;&lt;ctrl name='Close Tab (Ctrl+W)' role='push button' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 1 second" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="706,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+            <TextExpression.Namespaces>
+              <sco:Collection x:TypeArguments="x:String">
+                <x:String>System.Activities</x:String>
+                <x:String>System.Activities.Statements</x:String>
+                <x:String>System.Activities.Expressions</x:String>
+                <x:String>System.Activities.Validation</x:String>
+                <x:String>System.Activities.XamlIntegration</x:String>
+                <x:String>Microsoft.VisualBasic.Activities</x:String>
+                <x:String>System</x:String>
+                <x:String>System.Collections.Generic</x:String>
+                <x:String>System.Data</x:String>
+                <x:String>System.Diagnostics</x:String>
+                <x:String>System.IO</x:String>
+                <x:String>System.Linq</x:String>
+                <x:String>System.Management.Automation</x:String>
+                <x:String>System.Net.Mail</x:String>
+                <x:String>System.Xml</x:String>
+                <x:String>System.Xml.Linq</x:String>
+                <x:String>UiPath.Library</x:String>
+                <x:String>System.Windows.Markup</x:String>
+              </sco:Collection>
+            </TextExpression.Namespaces>
+            <TextExpression.References>
+              <sco:Collection x:TypeArguments="AssemblyReference">
+                <AssemblyReference>System.Activities</AssemblyReference>
+                <AssemblyReference>mscorlib</AssemblyReference>
+                <AssemblyReference>System.Data</AssemblyReference>
+                <AssemblyReference>System</AssemblyReference>
+                <AssemblyReference>System.Core</AssemblyReference>
+                <AssemblyReference>System.Management.Automation</AssemblyReference>
+                <AssemblyReference>System.Xml</AssemblyReference>
+                <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                <AssemblyReference>UiPath.Library</AssemblyReference>
+                <AssemblyReference>PresentationFramework</AssemblyReference>
+                <AssemblyReference>WindowsBase</AssemblyReference>
+                <AssemblyReference>PresentationCore</AssemblyReference>
+                <AssemblyReference>System.Xaml</AssemblyReference>
+              </sco:Collection>
+            </TextExpression.References>
+            <sap2010:WorkflowViewState.ViewStateManager>
+              <sap2010:ViewStateManager>
+                <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+              </sap2010:ViewStateManager>
+            </sap2010:WorkflowViewState.ViewStateManager>
+          </Delay>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_64" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="26" OffsetY="6" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7d7262f7e6ef3168afeaddb4d8c4320a" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_6' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_65" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="54" OffsetY="11" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5cf2e43268046c9582e7532ccc84ba3d" Selector="&lt;html htmlwindowname='*' title='Oversigt - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='navNodeAnchor_2_5' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_9">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_66" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="7" OffsetY="11" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="647d94aae366a85c2540cf4371438766" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_10" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b99c942248a0d9c7013d0a9ae93d3e6d" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_67" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="44" OffsetY="7" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7c89d07f2c4b36d5d23e773cb47352aa" Selector="&lt;html htmlwindowname='*' title='Rapporter - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Administration' parentid='DetailedNavigationTree9navurl://37c6500a221130c3285ef4eda676e6c5*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Step17" EmptyField="True" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="True" Text="[profitcenter]">
+            <ui:TypeInto.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="47c345b52778d43032865aa5f72c0350" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='profit_ctr' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+            </ui:TypeInto.Target>
+          </ui:TypeInto>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_68" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="23" OffsetY="10" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2295cbdbf7d4f1cee4cf9199e70e7f78" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl id='htmlb_button_1' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_69" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="40" OffsetY="9" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="804d8fd73b036344c275c8dda41925fa" Selector="&lt;html htmlwindowname='*' title='Administration - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:AnchorBase AnchorPosition="Right" sap:VirtualizedContainerService.HintSize="706,198" sap2010:WorkflowViewState.IdRef="AnchorBase_11">
+            <ui:AnchorBase.Action>
+              <ActivityAction x:TypeArguments="ui:Anchor">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
+                </ActivityAction.Argument>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_71" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition OffsetX="6" OffsetY="5" Position="TopLeft" />
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="516597728a692bf156df2e24f17d517a" Selector="&lt;webctrl tag='SPAN' /&gt;" WaitForReady="COMPLETE" />
+                  </ui:Click.Target>
+                </ui:Click>
+              </ActivityAction>
+            </ui:AnchorBase.Action>
+            <ui:AnchorBase.AnchorProvider>
+              <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_12" WaitActive="False" WaitVisible="False">
+                <ui:WaitUiElementAppear.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="26d6c09e273143856d3beb0ffd0761a8" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Mit forventede regnskab (MFR)' parentid='DetailedNavigationTree' tag='A' /&gt;" WaitForReady="COMPLETE" />
+                </ui:WaitUiElementAppear.Target>
+              </ui:WaitUiElementAppear>
+            </ui:AnchorBase.AnchorProvider>
+          </ui:AnchorBase>
+          <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="Click_72" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+            <ui:Click.CursorPosition>
+              <ui:CursorPosition OffsetX="43" OffsetY="7" Position="TopLeft" />
+            </ui:Click.CursorPosition>
+            <ui:Click.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="fce2d20afee10d914aae98c8ce776765" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://43f2cc4b9aebb28eaf23db268538b1a0*' tag='A' /&gt;" WaitForReady="COMPLETE" />
+            </ui:Click.Target>
+          </ui:Click>
+          <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="tag" DisplayName="Step17" sap:VirtualizedContainerService.HintSize="706,134" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+            <ui:GetAttribute.Result>
+              <OutArgument x:TypeArguments="x:String">[attribute]</OutArgument>
+            </ui:GetAttribute.Result>
+            <ui:GetAttribute.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2a915d9a649241b705bcc5ec7a11857e" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='ANALYSIS_ITEM_2_ia_110_5' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:GetAttribute.Target>
+          </ui:GetAttribute>
+          <If Condition="[attribute=&quot;INPUT&quot;]" sap:VirtualizedContainerService.HintSize="706,208" sap2010:WorkflowViewState.IdRef="If_4">
+            <If.Else>
+              <Throw Exception="[new Exception(&quot;FEJL&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_4" />
+            </If.Else>
+          </If>
+          <ui:CloseApplication DisplayName="Close Application 'iexplore.exe mitKMD'" sap:VirtualizedContainerService.HintSize="706,106" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+            <ui:CloseApplication.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="da3e723121ad01eb6d1d978e443c786c" Selector="&lt;wnd app='iexplore.exe' omit:cls='IEFrame' omit:title='mitKMD - Sider - Hjem - Internet Explorer' /&gt;" WaitForReady="INTERACTIVE" />
+            </ui:CloseApplication.Target>
+          </ui:CloseApplication>
+        </Sequence>
+      </Sequence>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="750,205" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch.Try>
+          <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="414,677" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="http://dportal.kmd.dk">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,578" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="brugernavn" />
+                    <Variable x:TypeArguments="x:String" Name="kodeord" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="indsæt brugernavn" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[brugernavn]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7fe520e937c995c460c63a7f168fe0a5" Selector="&lt;webctrl id='def' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Indsæt password" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="[kodeord]">
+                    <ui:TypeInto.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4d31cf221098310083291baf337f89b9" Selector="&lt;webctrl id='logonpassfield' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:TypeInto.Target>
+                  </ui:TypeInto>
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click login" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6f0dbfb2d4c40b6ddf023575544ffed6" Selector="&lt;webctrl id='button' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+          </ui:OpenBrowser>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="ui:SelectorNotFoundException">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:SelectorNotFoundException" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ALM_incident workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="ALM_incident.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="processnavn">[exception.Message]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="stepnavn">[exception.Source]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </Catch>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ALM_incident workflow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="ALM_incident.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="processnavn">[exception.Message]</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="stepnavn">[exception.Source]</InArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+  </Sequence>
+</Activity>

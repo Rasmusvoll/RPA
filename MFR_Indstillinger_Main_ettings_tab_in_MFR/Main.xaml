@@ -1,0 +1,870 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="588,11634" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main settings tab in MFR" sap:VirtualizedContainerService.HintSize="548,11554" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:Rectangle" Name="pos_text" />
+      <Variable x:TypeArguments="sd:Rectangle" Name="pos_gem" />
+      <Variable x:TypeArguments="x:Int32" Name="pos_dif" />
+      <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="elements_found" />
+      <Variable x:TypeArguments="x:Int32" Name="count" />
+      <Variable x:TypeArguments="x:String" Name="text" />
+      <Variable x:TypeArguments="x:String" Name="text2" />
+      <Variable x:TypeArguments="ui:Image" Name="screenshot" />
+      <Variable x:TypeArguments="x:Int32" Name="out_pos" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open Browser" Hidden="True" sap:VirtualizedContainerService.HintSize="526,677" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Private="False" Url="http://dportal.kmd.dk">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,578" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Default="T01797MFRcen" Name="testbruger" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="indsæt brugernavn" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[testbruger]">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7fe520e937c995c460c63a7f168fe0a5" Selector="&lt;webctrl id='def' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:TypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:TypeInto>
+            <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Indsæt password" EmptyField="True" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" SendWindowMessages="False" SimulateType="False" Text="Kmd12345">
+              <ui:TypeInto.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4d31cf221098310083291baf337f89b9" Selector="&lt;webctrl id='logonpassfield' tag='INPUT' /&gt;" WaitForReady="COMPLETE" />
+              </ui:TypeInto.Target>
+            </ui:TypeInto>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click login" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6f0dbfb2d4c40b6ddf023575544ffed6" Selector="&lt;webctrl id='button' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:OpenBrowser>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c5e648e07bdefcb21bb21c757805399b" Selector="&lt;html omit:htmlwindowname='*' title='Forside - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl parentid='navNode_1_2' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Step1" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9fba1da438c0129c594658e9140ba67f" Selector="&lt;html omit:htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl isleaf='1' parentid='DetailedNavigationTree' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="9e4a5eb9c9e55542ce334d1408596275" Selector="&lt;html omit:htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Indstillinger' parentid='DetailedNavigationTree9navurl://5ce6b4db710b8fc8ebe225278a5f89b1*' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="8842528363deb61105a50c85ffff3a7a" Selector="&lt;html omit:htmlwindowname='*' title='Indstillinger - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='Vælg ' parentid='controllerTbl' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:Click>
+    <Sequence DisplayName="If_Icon_there_then_click" sap:VirtualizedContainerService.HintSize="526,1745" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="image_there" />
+        <Variable x:TypeArguments="x:Int32" Name="counter" />
+        <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Images_found" />
+        <Variable x:TypeArguments="x:Int32" Name="Image_count" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="504,1621" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <Sequence sap:VirtualizedContainerService.HintSize="486,1096" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FindImageMatches DisplayName="Find Image Matches 'iexplore.exe Hierarkino...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="FindImageMatches_3" Matches="[Images_found]">
+              <ui:FindImageMatches.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVDhP7ZPfS1NxGIcPVKPcVRbiD5rIoIs0jKC8iO1mF2IlaIINKiNiQumWyyO4ZkJzOsu048QCzcoaRkS2mQpFp53RL0QjiVEKY0EQhbuQZXoT8eQ5Ugxi9A/0wnPx/b6f5+p9X4GU6urqQhCEtKj91BJsNhu/KSkpIScnB6fTiSRJ+Hw+RFHU3uq/2k/NC3q9HpPJRGVlJVarFYfDgSzLxONxZmaijAbD3H/wFMuBKrbv2qth3Lkb3cZNCAaDgUAgwPz8PIlEQpNCoRDBYJCBwRBeX4i2jiB2zzVqL0gax5s72JyVjaDT6SgoKKCwsJDi4mKKioowGo0a+flGcvPWyMo1sDV3m8aW7DzWrd+A0NTUREZGBjv27MNUXv1P1JyaVz0hGo2SmZnJsbpGrtwZxT8ygavnLp3Dj2gduIfz8k2au0eodV/klEei/ES9lle9P7LX6yUWi/Hla5K+qxFevV8gIE/T3DNCT6/MoaqjHDktrsr29PLiYpKJyQhvPy4QDM/RN/CYsTGZhoaziJ5+as50ppeTySSKovDu0wLjSozrNxRtdC6Xi5ZLw5xs7P0vp8rflr7zcmqa2fhnJpUP3LqtMD4hc761gxbfEDV1benllR8/mUss8/rNLM/CEUJjYfr6FbqlJ7jcEmX7D6aXl5ZXmJqNEnn+goerFzU4pKwuSZhzbj/1dpHS0tK/5YqKCtrb2/H7/dreqndsqxU5bBWptjZisZRhNpu1A1qTo/wCEiStk8NYtsgAAAAASUVORK5CYII=" />
+              </ui:FindImageMatches.Image>
+              <ui:FindImageMatches.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:FindImageMatches.Target>
+            </ui:FindImageMatches>
+            <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[Image_count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Images_found.Count]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,726" sap2010:WorkflowViewState.IdRef="DoWhile_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <DoWhile.Condition>[counter &lt; Image_count]</DoWhile.Condition>
+              <Sequence sap:VirtualizedContainerService.HintSize="358,562" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap:VirtualizedContainerService.HintSize="336,338" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:UiElement" Name="image_click" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WaitImageAppear DisplayName="Find Image 'iexplore.exe Hierarkino...'" FoundElement="[image_click]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                    <ui:WaitImageAppear.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAYAAADtNKTnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVDhP7ZRdSFNhGMcH1Si9ykL8oIkMukjDCMqLmDdeiJWgCTaojIgJ5Ucuj+DShHQ6y7TjxAaalTWMiGwzFYzWzugL0WjEKIWxIIjCXcgyvYn45XmFkmoMyu564Hdx3vf5/26e87waVqH+jaS9vR2NRhMV9f7n0iiKgslk+k52djbJycmYzWZkWcZmsyFJkvhWz9X7lf1qXuNwOIiPj8dgMFBUVITRaKSqqgqPx0MoFGJqKsCQy8uduw/J3VfM1h27BfrtO9Gu34CaFxKdTofT6WRmZoZwOCzCbrcbl8tFb58bq81Nc6uLyiYHZedkwdG6VjYmJv2QaLVa0tPTycjIICsri8zMTPR6vSAtTU9K6jKJKTo2p2wRbEpKZc3adcsSv99PbW0tcXFxbNu1B0NBSUzUPrVfzal5MZ1AIEBCQgJHymu4dHMI++Aols5btA3cp7H3NuaL16jrGKSs/jwnmmQKjlWIfjUnprNSYrVaCQaDfPgYofuyj2evZ3F6JqnrHKSzy8OB4sMcOiktSSpjS+bmIoyO+Xj5dhaXd5ru3nGGhz1UV59Gauqh9FRbbEkkEhHzf/VulhElyJWrihi5xWKh4cIAx2u6/kv+RPJp/jNPJybxh94zprzh+g2FkVEPZxtbabD1U1reHFuy+OUr0+EFnr/w88jrwz3spbtHoUN+gKVeJn/v/tiS+YVFJvwBfI+fcG9pg/v6laWfzcuZejsVlRJ5eXnRJYWFhbS0tGC328VeqO+IqUzioFGixFhDbm4+OTk5YlGjSn73kkXjF8nf1ipI4BvhB156O5GZ6QAAAABJRU5ErkJggg==" />
+                    </ui:WaitImageAppear.Image>
+                    <ui:WaitImageAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:WaitImageAppear.Target>
+                  </ui:WaitImageAppear>
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[image_click]" WaitForReady="INTERACTIVE" />
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+                <Assign sap:VirtualizedContainerService.HintSize="336,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </DoWhile>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="490,105" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:TimeoutException">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+              </ActivityAction.Argument>
+            </ActivityAction>
+          </Catch>
+          <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="490,105" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="ui:ActivityTimeoutException">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:ActivityTimeoutException" Name="exception" />
+              </ActivityAction.Argument>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+    <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetPosition_1" Rectangle="[pos_text]">
+      <ui:GetPosition.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1cabd2966eb151b3a58571b3a580bc37" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='controllerTbl' tag='TABLE' /&gt;&lt;webctrl isleaf='1' parentid='controllerTbl' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetPosition.Target>
+    </ui:GetPosition>
+    <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Step2" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetPosition_2" Rectangle="[pos_gem]">
+      <ui:GetPosition.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="be51f2f0b6210e3dcd237dfc06a804a3" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='saveBut' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetPosition.Target>
+    </ui:GetPosition>
+    <Assign sap:VirtualizedContainerService.HintSize="526,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[pos_dif]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[pos_gem.Y-pos_text.Y]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <If Condition="[pos_dif &gt;30]" sap:VirtualizedContainerService.HintSize="526,210" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Throw Exception="[new NotSupportedException(&quot;Fejl ved fjernelse af profit centre&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
+      </If.Then>
+    </If>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e88b8afc253507b3171654ed1d8dd70a" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000023-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="bca62df9b7dc33bcc345c2d25729d3c6" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000647-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7e93f7dc1e3cde46fee6abc5c81e2eb1" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000536-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:FindChildren Children="[elements_found]" DisplayName="Find Children 'TD'" Filter="&lt;webctrl parentid='selectedNodesTable' tag='IMG' /&gt;" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="FindChildren_3" Scope="FIND_DESCENDANTS">
+      <ui:FindChildren.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e67be169b99b488da592d6eb413a7195" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl parentid='selectedNodesTable' tag='TBODY' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:FindChildren.Target>
+    </ui:FindChildren>
+    <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="526,319" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[elements_found]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="ui:UiElement">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:UiElement" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="264,184" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="242,60" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[count+1]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <If Condition="[count &lt;&gt; 3]" sap:VirtualizedContainerService.HintSize="526,210" sap2010:WorkflowViewState.IdRef="If_8">
+      <If.Then>
+        <Throw Exception="[new Exception(&quot;FEJL&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_8" />
+      </If.Then>
+    </If>
+    <Sequence DisplayName="If_Icon_there_then_click" sap:VirtualizedContainerService.HintSize="526,1847" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Name="image_there" />
+        <Variable x:TypeArguments="x:Int32" Name="counter" />
+        <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="Images_found" />
+        <Variable x:TypeArguments="x:Int32" Name="Image_count" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="504,1723" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+        <TryCatch.Try>
+          <Sequence sap:VirtualizedContainerService.HintSize="486,1198" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:FindImageMatches DisplayName="Find Image Matches 'iexplore.exe Hierarkino...'" sap:VirtualizedContainerService.HintSize="464,106" sap2010:WorkflowViewState.IdRef="FindImageMatches_3" Matches="[Images_found]">
+              <ui:FindImageMatches.Image>
+                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI0SURBVDhP7ZPfS1NxGIcPVKPcVRbiD5rIoIs0jKC8iO1mF2IlaIINKiNiQumWyyO4ZkJzOsu048QCzcoaRkS2mQpFp53RL0QjiVEKY0EQhbuQZXoT8eQ5Ugxi9A/0wnPx/b6f5+p9X4GU6urqQhCEtKj91BJsNhu/KSkpIScnB6fTiSRJ+Hw+RFHU3uq/2k/NC3q9HpPJRGVlJVarFYfDgSzLxONxZmaijAbD3H/wFMuBKrbv2qth3Lkb3cZNCAaDgUAgwPz8PIlEQpNCoRDBYJCBwRBeX4i2jiB2zzVqL0gax5s72JyVjaDT6SgoKKCwsJDi4mKKioowGo0a+flGcvPWyMo1sDV3m8aW7DzWrd+A0NTUREZGBjv27MNUXv1P1JyaVz0hGo2SmZnJsbpGrtwZxT8ygavnLp3Dj2gduIfz8k2au0eodV/klEei/ES9lle9P7LX6yUWi/Hla5K+qxFevV8gIE/T3DNCT6/MoaqjHDktrsr29PLiYpKJyQhvPy4QDM/RN/CYsTGZhoaziJ5+as50ppeTySSKovDu0wLjSozrNxRtdC6Xi5ZLw5xs7P0vp8rflr7zcmqa2fhnJpUP3LqtMD4hc761gxbfEDV1benllR8/mUss8/rNLM/CEUJjYfr6FbqlJ7jcEmX7D6aXl5ZXmJqNEnn+goerFzU4pKwuSZhzbj/1dpHS0tK/5YqKCtrb2/H7/dreqndsqxU5bBWptjZisZRhNpu1A1qTo/wCEiStk8NYtsgAAAAASUVORK5CYII=" />
+              </ui:FindImageMatches.Image>
+              <ui:FindImageMatches.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:FindImageMatches.Target>
+            </ui:FindImageMatches>
+            <Assign sap:VirtualizedContainerService.HintSize="464,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[Image_count]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[Images_found.Count]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <DoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="464,726" sap2010:WorkflowViewState.IdRef="DoWhile_2" Condition="[counter &lt; Image_count]">
+              <Sequence sap:VirtualizedContainerService.HintSize="358,562" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Sequence sap:VirtualizedContainerService.HintSize="336,338" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:UiElement" Name="image_click" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WaitImageAppear DisplayName="Find Image 'iexplore.exe Hierarkino...'" FoundElement="[image_click]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="WaitImageAppear_2">
+                    <ui:WaitImageAppear.Image>
+                      <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABEAAAAXCAYAAADtNKTnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJaSURBVDhP7ZRdSFNhGMcH1Si9ykL8oIkMukjDCMqLmDdeiJWgCTaojIgJ5Ucuj+DShHQ6y7TjxAaalTWMiGwzFYzWzugL0WjEKIWxIIjCXcgyvYn45XmFkmoMyu564Hdx3vf5/26e87waVqH+jaS9vR2NRhMV9f7n0iiKgslk+k52djbJycmYzWZkWcZmsyFJkvhWz9X7lf1qXuNwOIiPj8dgMFBUVITRaKSqqgqPx0MoFGJqKsCQy8uduw/J3VfM1h27BfrtO9Gu34CaFxKdTofT6WRmZoZwOCzCbrcbl8tFb58bq81Nc6uLyiYHZedkwdG6VjYmJv2QaLVa0tPTycjIICsri8zMTPR6vSAtTU9K6jKJKTo2p2wRbEpKZc3adcsSv99PbW0tcXFxbNu1B0NBSUzUPrVfzal5MZ1AIEBCQgJHymu4dHMI++Aols5btA3cp7H3NuaL16jrGKSs/jwnmmQKjlWIfjUnprNSYrVaCQaDfPgYofuyj2evZ3F6JqnrHKSzy8OB4sMcOiktSSpjS+bmIoyO+Xj5dhaXd5ru3nGGhz1UV59Gauqh9FRbbEkkEhHzf/VulhElyJWrihi5xWKh4cIAx2u6/kv+RPJp/jNPJybxh94zprzh+g2FkVEPZxtbabD1U1reHFuy+OUr0+EFnr/w88jrwz3spbtHoUN+gKVeJn/v/tiS+YVFJvwBfI+fcG9pg/v6laWfzcuZejsVlRJ5eXnRJYWFhbS0tGC328VeqO+IqUzioFGixFhDbm4+OTk5YlGjSn73kkXjF8nf1ipI4BvhB156O5GZ6QAAAABJRU5ErkJggg==" />
+                    </ui:WaitImageAppear.Image>
+                    <ui:WaitImageAppear.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;" WaitForReady="INTERACTIVE" />
+                    </ui:WaitImageAppear.Target>
+                  </ui:WaitImageAppear>
+                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                    <ui:Click.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </ui:Click.CursorPosition>
+                    <ui:Click.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" Element="[image_click]" WaitForReady="INTERACTIVE" />
+                    </ui:Click.Target>
+                  </ui:Click>
+                </Sequence>
+                <Assign sap:VirtualizedContainerService.HintSize="336,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:Int32">[counter+1]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </DoWhile>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="464,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="ending" />
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:TimeoutException" sap:VirtualizedContainerService.HintSize="490,105" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:TimeoutException">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:TimeoutException" Name="exception" />
+              </ActivityAction.Argument>
+            </ActivityAction>
+          </Catch>
+          <Catch x:TypeArguments="ui:ActivityTimeoutException" sap:VirtualizedContainerService.HintSize="490,105" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="ui:ActivityTimeoutException">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="ui:ActivityTimeoutException" Name="exception" />
+              </ActivityAction.Argument>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+    </Sequence>
+    <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'TD'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetPosition_3" Rectangle="[pos_text]">
+      <ui:GetPosition.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1cabd2966eb151b3a58571b3a580bc37" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='controllerTbl' tag='TABLE' /&gt;&lt;webctrl isleaf='1' parentid='controllerTbl' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetPosition.Target>
+    </ui:GetPosition>
+    <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'A  saveBut'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetPosition_4" Rectangle="[pos_gem]">
+      <ui:GetPosition.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="be51f2f0b6210e3dcd237dfc06a804a3" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='saveBut' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetPosition.Target>
+    </ui:GetPosition>
+    <Assign sap:VirtualizedContainerService.HintSize="526,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[pos_dif]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[pos_gem.Y-pos_text.Y]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  levels'" sap:VirtualizedContainerService.HintSize="526,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="2">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>Antal viste niveauer :</x:String>
+          <x:String>1</x:String>
+          <x:String>2</x:String>
+          <x:String>3</x:String>
+          <x:String>4</x:String>
+          <x:String>5</x:String>
+          <x:String>6</x:String>
+          <x:String>7</x:String>
+          <x:String>8</x:String>
+          <x:String>9</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e24919629f4447a658f4ef932f3391fe" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='levels' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG  hierarchy_tree0000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e5890552b0c48722a2d9a38000578d38" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000003-exp' tag='IMG' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <Sequence DisplayName="calculate position" sap:VirtualizedContainerService.HintSize="526,476" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:Rectangle" Name="var1" />
+        <Variable x:TypeArguments="sd:Rectangle" Name="var2" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="GetPosition_1" Rectangle="[var1]">
+        <ui:GetPosition.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b923d0481b2c731b1aa125d52c917a58" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000003-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:GetPosition.Target>
+      </ui:GetPosition>
+      <ui:GetPosition ContinueOnError="{x:Null}" DisplayName="Get Position 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="GetPosition_2" Rectangle="[var2]">
+        <ui:GetPosition.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2c4ebaf5d9e2a0de319faa5a1cbc85f9" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000023-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+        </ui:GetPosition.Target>
+      </ui:GetPosition>
+      <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:Int32">[out_pos]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:Int32">[math.Abs(var1.Y-var2.Y)]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Sequence>
+    <If Condition="[out_pos &lt; 15 or out_pos &gt; 25]" sap:VirtualizedContainerService.HintSize="526,210" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Throw Exception="[new Exception(&quot;Hierakiet kan stadig foldes ud&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_3" />
+      </If.Then>
+    </If>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  levels'" sap:VirtualizedContainerService.HintSize="526,134" sap2010:WorkflowViewState.IdRef="SelectItem_2" Item="4">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="16">
+          <x:String>Antal viste niveauer :</x:String>
+          <x:String>1</x:String>
+          <x:String>2</x:String>
+          <x:String>3</x:String>
+          <x:String>4</x:String>
+          <x:String>5</x:String>
+          <x:String>6</x:String>
+          <x:String>7</x:String>
+          <x:String>8</x:String>
+          <x:String>9</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e24919629f4447a658f4ef932f3391fe" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='levels' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="db5bcbebf4329858c481699a6f78859e" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000003-exp' tag='IMG' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'IMG  hierarchy_tree0000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6918228d07560687a9240ee82a35f9fb" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000004-exp' tag='IMG' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN  hierarchy_tree000...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="04d84d19edf9ac79aba6f6edad75d3a5" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='hierarchy_tree00000005-cnt-start' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'TD'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetValue_2">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e91422ea01eebd8d7d3322ee4c4e6e01" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='selectedNodesTable' tag='TABLE' /&gt;&lt;webctrl isleaf='1' tableCol='4' tag='TD' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
+      </ui:GetValue.Value>
+    </ui:GetValue>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  saveBut'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5b215267fa62b0d154326e72aae3f547" Selector="&lt;html htmlwindowname='0PROFIT_CTR' title='Hierarkinode vælger' /&gt;&lt;webctrl id='saveBut' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="6c1a1572d8e3ba781769cd6dfbc38bf2" Selector="&lt;html htmlwindowname='*' title='Opfølgning - KMD Rollebaseret Indgang - Udvikling DP6.' /&gt;&lt;webctrl aaname='MFR Justering og overblik' parentid='DetailedNavigationTree9navurl://5ce6b4db710b8fc8ebe225278a5f89b1*' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'SELECT  profit_ctr_dd'" sap:VirtualizedContainerService.HintSize="526,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="[text]">
+      <ui:SelectItem.Items>
+        <scg:List x:TypeArguments="x:String" Capacity="4">
+          <x:String>Vælg ...</x:String>
+          <x:String>1005000001 Arbejdsmarked - fællesområde</x:String>
+        </scg:List>
+      </ui:SelectItem.Items>
+      <ui:SelectItem.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c0ad06cf2bc5e6e45afed17170b63d26" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='profit_ctr_dd' tag='SELECT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:SelectItem.Target>
+    </ui:SelectItem>
+    <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'A  saveButton01'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_3" WaitActive="False" WaitVisible="False">
+      <ui:WaitUiElementAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f8381896393e4593209142d7cc8558a4" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton01' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitUiElementAppear.Target>
+    </ui:WaitUiElementAppear>
+    <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'A  saveButton02'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_4" WaitActive="False" WaitVisible="False">
+      <ui:WaitUiElementAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="924184fdc55031895f1cd02e015b5717" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton02' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitUiElementAppear.Target>
+    </ui:WaitUiElementAppear>
+    <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'A  saveButton04'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_5" WaitActive="False" WaitVisible="False">
+      <ui:WaitUiElementAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f5164e01e0e6c593ec265f1a5220473f" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton04' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitUiElementAppear.Target>
+    </ui:WaitUiElementAppear>
+    <ui:WaitUiElementAppear FoundElement="{x:Null}" DisplayName="Find Element 'A  saveButton03'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_6" WaitActive="False" WaitVisible="False">
+      <ui:WaitUiElementAppear.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="23c9d20ec58bbd3da51463c40ab257b7" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton03' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:WaitUiElementAppear.Target>
+    </ui:WaitUiElementAppear>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  saveButton03'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="23c9d20ec58bbd3da51463c40ab257b7" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton03' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A '" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c5c0d342409747f319b6b45222fa2f3d" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl parentid='OD_BUTTON1' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:Check ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="Check 'INPUT  od_17'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Check_3">
+      <ui:Check.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="408c36f6776e90fb09f718d5e24db50b" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='od_17' tag='INPUT' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Check.Target>
+    </ui:Check>
+    <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  saveButton02'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+      <ui:Click.CursorPosition>
+        <ui:CursorPosition Position="Center">
+          <ui:CursorPosition.OffsetX>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetX>
+          <ui:CursorPosition.OffsetY>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:CursorPosition.OffsetY>
+        </ui:CursorPosition>
+      </ui:Click.CursorPosition>
+      <ui:Click.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="20021a9d16e1138e53d2f6341e341cc3" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='saveButton02' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:Click.Target>
+    </ui:Click>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN  ANALYSIS_ITEM_2_i...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetValue_8">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b8ee23bb6424e47e342f54a03a8fdf1e" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='ANALYSIS_ITEM_2_ia_0x1_tv' idx='1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
+      </ui:GetValue.Value>
+    </ui:GetValue>
+    <If Condition="[Trim(text) =&quot;Omkostningssted&quot;]" sap:VirtualizedContainerService.HintSize="526,210" sap2010:WorkflowViewState.IdRef="If_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Else>
+        <Throw Exception="[new NotSupportedException(&quot;navn passer ikke&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_6" />
+      </If.Else>
+    </If>
+    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'SPAN  ANALYSIS_ITEM_2_i...'" sap:VirtualizedContainerService.HintSize="526,106" sap2010:WorkflowViewState.IdRef="GetValue_9">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c77402b7de2914ed7e38911d18993cac" Selector="&lt;html htmlwindowname='*' title='MFR Justering og overblik - KMD Rollebaseret Indgang - Udvikling*' /&gt;&lt;webctrl id='ANALYSIS_ITEM_2_ia_1x1_tv' idx='1' tag='SPAN' /&gt;" WaitForReady="INTERACTIVE" />
+      </ui:GetValue.Target>
+      <ui:GetValue.Value>
+        <OutArgument x:TypeArguments="x:String">[text]</OutArgument>
+      </ui:GetValue.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:GetValue>
+    <If Condition="[text =&quot;PSP-element&quot;]" sap:VirtualizedContainerService.HintSize="526,210" sap2010:WorkflowViewState.IdRef="If_7">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If.Else>
+        <Throw Exception="[new NotSupportedException(&quot;navn passer ikke&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_7" />
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
